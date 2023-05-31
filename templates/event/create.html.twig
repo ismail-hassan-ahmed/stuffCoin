@@ -1,0 +1,100 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Create Event{% endblock %}
+
+{% block body %}
+
+    {{ include('layouts/_navbar.html.twig') }}
+
+    <section class="bg-gray-100">
+        <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
+                <div class="lg:col-span-2 lg:py-12">
+                    <p class="max-w-xl text-lg">
+                        At the same time, the fact that we are wholly owned and totally
+                        independent from manufacturer and other group control gives you
+                        confidence that we will only recommend what is right for you.
+                    </p>
+
+                    <div class="mt-8">
+                        <a href="" class="text-2xl font-bold text-pink-600">
+                            0151 475 4450
+                        </a>
+
+                        <address class="mt-2 not-italic">
+                            282 Kevin Brook, Imogeneborough, CA 58517
+                        </address>
+                    </div>
+                </div>
+
+                <div class="rounded-lg bg-white p-8 lg:col-span-3 lg:p-12">
+                    <form method="post" class="space-y-4">
+                        {{ form_start(FormEvent) }}
+                        <div>
+                            <label class="sr-only" for="name">Name</label>
+                            {{form_label(FormEvent.title, "Nom de l'événement", {'label_attr': {'class': 'text-gray-800 font-semibold mb-2'}})}}
+                            {{form_widget(FormEvent.title, {'attr': {'class' : 'w-full rounded-lg border-gray-200 p-3 text-sm'}})}}
+                            <div class="text-red-500 font-semibold text-xs bg-white">
+                                {{form_errors(FormEvent.title)}}
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                            <div>
+                                {{form_label(FormEvent.location, "Lieu", {'label_attr': {'class': 'text-gray-800 font-semibold mb-2'}})}}
+                                {{form_widget(FormEvent.location, {'attr': {'class' : 'w-full rounded-lg border-gray-200 p-3 text-sm'}})}}
+                                <div class="text-red-500 font-semibold text-xs bg-white">
+                                    {{form_errors(FormEvent.location)}}
+                                </div>
+                            </div>
+
+                            <div>
+                                {{form_label(FormEvent.startsAt, "Lieu", {'label_attr': {'class': 'text-gray-800 font-semibold mb-2'}})}}
+                                {{form_widget(FormEvent.startsAt, {'attr': {'class' : 'w-full rounded-lg border-gray-200 p-3 text-sm'}})}}
+                                <div class="text-red-500 font-semibold text-xs bg-white">
+                                    {{form_errors(FormEvent.startsAt)}}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                            <div>
+                                {{form_label(FormEvent.price, "Prix", {'label_attr': {'class': 'text-gray-800 font-semibold mb-2'}})}}
+                                {{form_widget(FormEvent.price, {'attr': {'class' : 'w-full rounded-lg border-gray-200 p-3 text-sm'}})}}
+                                <div class="text-red-500 font-semibold text-xs bg-white">
+                                    {{form_errors(FormEvent.price)}}
+                                </div>
+                            </div>
+
+                            <div>
+                                {{form_label(FormEvent.imageFile, "Télécharger une image", {'label_attr': {'class': 'text-gray-800 font-semibold'}})}}
+                                {{form_widget(FormEvent.imageFile, {'attr': {'class' : 'w-full rounded-lg border-gray-200 p-3 text-sm'}})}}
+                                <div class="text-red-500 font-semibold text-xs bg-white">
+                                    {{form_errors(FormEvent.imageFile)}}
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div>
+                            {{form_label(FormEvent.content, "Description", {'label_attr': {'class': 'text-gray-800 font-semibold'}})}}
+                            {{form_widget(FormEvent.content, {'attr': {'class' : 'w-full rounded-lg border-gray-200 p-3 text-sm'}})}}
+                            {{form_errors(FormEvent.content)}}
+                        </div>
+
+                        <div class="mt-4">
+                            <button
+                                    type="submit"
+                                    class="inline-block w-full rounded-lg bg-rose-500 px-5 py-3 font-medium text-white sm:w-auto"
+                            >
+                                Créer un événement
+                            </button>
+                        </div>
+                        {{ form_end(FormEvent) }}
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
