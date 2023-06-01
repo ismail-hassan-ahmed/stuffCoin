@@ -67,6 +67,7 @@
                             </div>
 
                             <div>
+
                                 {{form_label(FormEvent.imageFile, "Télécharger une image", {'label_attr': {'class': 'text-gray-800 font-semibold'}})}}
                                 {{form_widget(FormEvent.imageFile, {'attr': {'class' : 'w-full rounded-lg border-gray-200 p-3 text-sm'}})}}
                                 <div class="text-red-500 font-semibold text-xs bg-white">
@@ -74,8 +75,13 @@
                                 </div>
                             </div>
                         </div>
-
-
+                        <div>
+                            {{form_label(FormEvent.category, "Choisir une catégorie", {'label_attr': {'class': 'text-gray-800 font-semibold'}})}}
+                            {{form_widget(FormEvent.category, {'attr': {'class' : 'w-full rounded-lg border-gray-200 p-3 text-sm'}})}}
+                            <div class="text-red-500 font-semibold text-xs bg-white">
+                                {{form_errors(FormEvent.category)}}
+                            </div>
+                        </div>
                         <div>
                             {{form_label(FormEvent.content, "Description", {'label_attr': {'class': 'text-gray-800 font-semibold'}})}}
                             {{form_widget(FormEvent.content, {'attr': {'class' : 'w-full rounded-lg border-gray-200 p-3 text-sm'}})}}

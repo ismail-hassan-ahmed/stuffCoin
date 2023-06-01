@@ -22,9 +22,21 @@ class EventFormType extends AbstractType
     {
         $builder
             ->add('title', TextType::class)
-            ->add('content', TextareaType::class)
+            ->add('content', TextareaType::class, [
+
+                'attr' => [
+
+                    'rows' => "8",
+                    'placeholder' => "Veuillez décrire l'événement en quelques lignes..."
+                ]
+            ])
             ->add('location', TextType::class)
-            ->add('price', MoneyType::class)
+            ->add('price', MoneyType::class, [
+
+                'attr' => [
+                    'placeholder' => "Le prix de l'événement"
+                ]
+            ])
             ->add('startsAt')
             ->add('imageFile', VichImageType::class)
             ->add('category', EntityType::class, [
