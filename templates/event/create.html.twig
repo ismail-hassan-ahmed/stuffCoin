@@ -11,18 +11,16 @@
             <div class="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
                 <div class="lg:col-span-2 lg:py-12">
                     <p class="max-w-xl text-lg">
-                        At the same time, the fact that we are wholly owned and totally
-                        independent from manufacturer and other group control gives you
-                        confidence that we will only recommend what is right for you.
+                        ZEvent aide les organisateurs dans toutes les étapes de création de leurs événements
                     </p>
 
                     <div class="mt-8">
                         <a href="" class="text-2xl font-bold text-pink-600">
-                            0151 475 4450
+                           07 67 82 10 10 05
                         </a>
 
                         <address class="mt-2 not-italic">
-                            282 Kevin Brook, Imogeneborough, CA 58517
+                            41 Boulevard Charles Moretti, 13014 Marseille.
                         </address>
                     </div>
                 </div>
@@ -49,7 +47,7 @@
                             </div>
 
                             <div>
-                                {{form_label(FormEvent.startsAt, "Lieu", {'label_attr': {'class': 'text-gray-800 font-semibold mb-2'}})}}
+                                {{form_label(FormEvent.startsAt, "Date de l'événement", {'label_attr': {'class': 'text-gray-800 font-semibold mb-2'}})}}
                                 {{form_widget(FormEvent.startsAt, {'attr': {'class' : 'w-full rounded-lg border-gray-200 p-3 text-sm'}})}}
                                 <div class="text-red-500 font-semibold text-xs bg-white">
                                     {{form_errors(FormEvent.startsAt)}}
@@ -91,7 +89,7 @@
                         <div class="mt-4">
                             <button
                                     type="submit"
-                                    class="inline-block w-full rounded-lg bg-rose-500 px-5 py-3 font-medium text-white sm:w-auto"
+                                    class="inline-block w-full rounded-lg bg-pink-600 px-5 py-3 font-medium text-white sm:w-auto"
                             >
                                 Créer un événement
                             </button>

@@ -21,7 +21,13 @@ class EventFormType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('title', TextType::class)
+            ->add('title', TextType::class, [
+
+                'attr' => [
+
+                    'placeholder' => "Nommez votre événement"
+                ]
+            ])
             ->add('content', TextareaType::class, [
 
                 'attr' => [
@@ -30,7 +36,13 @@ class EventFormType extends AbstractType
                     'placeholder' => "Veuillez décrire l'événement en quelques lignes..."
                 ]
             ])
-            ->add('location', TextType::class)
+            ->add('location', TextType::class, [
+
+                'attr' => [
+
+                    'placeholder' => "Lieu de l'événement"
+                ]
+            ])
             ->add('price', MoneyType::class, [
 
                 'attr' => [

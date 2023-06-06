@@ -1,0 +1,5 @@
+knp_paginator:
+    # Choose a template that fits your needs
+    template:
+        pagination: '@KnpPaginator/Pagination/index.html.twig'
+        sortable: '@KnpPaginator/Pagination/sortable_link.html.twig'
